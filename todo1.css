@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    color: white;
+    background-color: #0c1324;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h2 {
+    font-size: xx-large;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, white, violet);
+    -webkit-background-clip: text;
+    /* For Safari */
+    background-clip: text;
+    /* For other browsers */
+    color: transparent;
+}
+
+input {
+    height: 40px;
+    width: 58%;
+    border-radius: 7px;
+    margin-top: 5%;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    font-size: medium;
+    color: black;
+    /* padding-left: 20px; */
+}
+
+button {
+    height: 40px;
+    width: 10%;
+    border-radius: 7px;
+    background-color: rgb(11, 236, 161);
+    transition: transform 250ms ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#add {
+    height: 450px;
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: zoom1 0.3s ease;
+}
+
+#add>div {
+    height: 40px;
+    color: white;
+    background-color: rgb(91, 91, 155);
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    font-size: medium;
+    animation: zoom2 0.3s ease-in-out;
+    justify-content: space-between;
+}
+
+#add::-webkit-scrollbar {
+    width: 8px;
+    /* Set width for the vertical scrollbar */
+}
+
+#add::-webkit-scrollbar-track {
+    background-color: white;
+    /*Darker background for the track*/
+    border-radius: 10px;
+}
+
+#add::-webkit-scrollbar-thumb {
+    background-color: rgb(158, 157, 157);
+    /* Light gray color for the thumb */
+    border-radius: 10px;
+}
+
+#add::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Darker thumb color on hover */
+}
+
+@keyframes zoom2 {
+    0% {
+        transform: scale(0.2);
+    }
+
+    20% {
+        transform: scale(0.5);
+
+    }
+
+    70% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+span {
+    color: white;
+    font-size: medium;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+#side {
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(33, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#circle {
+    height: 50px;
+    width: 30%;
+    background-color: rgb(217, 91, 217);
+    border-radius: 50%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.name {
+    margin-top: 9px;
+    margin-left: 15px;
+}
+
+#one {
+    font-size: large;
+}
+
+#search {
+    width: 90%;
+    color: white;
+    background-color: rgb(33, 32, 32);
+    border: 1px solid rgb(78, 78, 78);
+}
+
+#search::placeholder {
+    color: white;
+}
+
+#onebar,
+#twobar,
+#threebar,
+#fourbar,
+#fivebar {
+    height: 35px;
+    width: 95%;
+    border-radius: 3px;
+    margin-top: 18px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#onebar:hover,
+#twobar:hover,
+#threebar:hover,
+#fourbar:hover,
+#fivebar:hover,
+#nl1:hover {
+    background-color: #383737;
+}
+
+#nl {
+    height: 45%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+#nl1 {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hb {
+    visibility: hidden;
+    position: absolute;
+}
+
+#cancel {
+    display: none;
+}
+
+@media (max-width:768px) {
+    #side {
+        visibility: hidden;
+        position: absolute;
+        transition: left 250ms ease-in-out;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 2%;
+        user-select: none;
+    }
+
+    #hb {
+        visibility: visible;
+        position: static;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+    }
+
+    .line {
+        width: 90%;
+        height: 2px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    #add {
+        width: 90%;
+    }
+
+    .name>#one {
+        font-size: medium;
+    }
+
+    .name>#two {
+        font-size: small;
+    }
+
+    #circle {
+        width: 20%;
+        margin-left: 2%;
+    }
+
+    #cancel {
+        font-size: x-large;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+}
